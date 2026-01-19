@@ -11,10 +11,11 @@ language: "text"  # Explicitly set language to text for prompt evolution
 
 # LLM Configuration
 llm:
-  api_base: "https://generativelanguage.googleapis.com/v1beta/openai/"
+  api_base: "http://localhost:11434/v1"
   models:
-    - name: "gemini-2.5-flash-lite"  # Using Gemini 2.5 Flash Lite
+    - name: "qwen2.5:7b"  # Using local Qwen model
       weight: 1.0
+  api_key: "ollama"
   
   temperature: 0.4  # Optimal from experiments
   max_tokens: 16000  # Optimal context
